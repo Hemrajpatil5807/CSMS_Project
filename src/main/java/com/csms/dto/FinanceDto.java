@@ -1,5 +1,7 @@
 package com.csms.dto;
 
+import com.csms.entity.Users;
+import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,27 +17,24 @@ public class FinanceDto {
 
     private int site_id;
 
+    private String userName;
+
     private String expense_type;
 
     private double amount;
 
+    private String currency;
+
     private LocalDate date;
 
-    public FinanceDto(int site_id, String expense_type, double amount, String date) {
+    private LocalDate modified_on;
 
-        this.site_id = site_id;
-        this.expense_type = expense_type;
-        this.amount = amount;
-        this.date = LocalDate.parse(date);
-    }
+    private String gst;
 
-    public LocalDate getDate() {
-        return date;
-    }
+    private String expense_direction;
 
     public void setDate(String date) {
         this.date = LocalDate.parse(date);
-        ;
     }
 
 }

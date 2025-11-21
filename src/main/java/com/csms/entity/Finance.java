@@ -29,7 +29,7 @@ public class Finance {
 
 	@ManyToOne
 	@JoinColumn(name = "site_id")
-	private Sites site_id;
+	private Sites siteId;
 
 	@ManyToOne
 	@JoinColumn(name = "user_id")
@@ -59,7 +59,7 @@ public class Finance {
 	public Finance(Sites site_id, Users user_id, String expense_type, double amount, String currency, LocalDate date,
 			LocalDate modified_on, String gst, String expense_direction) {
 
-		this.site_id = site_id;
+		this.siteId = site_id;
 		this.user_id = user_id;
 		this.expense_type = expense_type;
 		this.amount = amount;
